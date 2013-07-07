@@ -1,0 +1,29 @@
+html { height: 100% }
+body { 
+    height: 100%; 
+    margin: 0; 
+    padding-top:15px;
+    padding-right:15px;
+}
+
+ .left {
+    width:20%;
+    float:left;
+    background-color:rgb(210,210,210);
+    height:80%;
+    border-radius: 10px;
+    margin-left: 15px;
+    margin-right:5px;
+}
+.right{
+    margin-left:20%;
+    height:80%;
+}
+#info-window{
+    position:relative;
+    left:-9999px;
+}
+
+#locations{
+
+}
