@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="knockout-2.2.1.js"></script>
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyANnq-KZEavTBCrs8BQ92AlpK0d1pkohGQ&sensor=false">
+    </script>
+    <script type="text/javascript" src="map.js"></script>
+  </head>
+  <body>
+      <div class="left">
+        <ul id="locations" data-bind="foreach: locations">
+          <label style="display: block">
+            <input data-bind="click: draw, attr: {'data-value': $data}" type="checkbox">
+            <span data-bind="text: $data"></span>
+          <label>
+        </ul>
+      </div>
+      <div class="right" id="map-canvas"></div>
+  </body>
+</html>
