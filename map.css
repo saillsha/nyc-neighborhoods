@@ -14,6 +14,7 @@ body {
     border-radius: 10px;
     margin-left: 15px;
     margin-right:5px;
+    overflow: auto;
 }
 .right{
     margin-left:20%;
@@ -25,5 +26,31 @@ body {
 }
 
 #locations{
+    padding-left:5px;
+}
 
+.label{
+    text-align:center;
+    color:#fff;
+    padding:3px;
+    background-color: rgba(68, 119, 176, .8);
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #336699;
+    position:relative;
+}
+
+.overlay_arrow{
+  left:50%;
+  margin-left:-10px;
+  width:0;
+  height:0;
+  position:absolute;
+}
+
+.overlay_arrow.above{
+  bottom:-11px;
+  border-left:10px solid transparent;
+  border-right:10px solid transparent;
+  border-top:10px solid #336699;
 }
