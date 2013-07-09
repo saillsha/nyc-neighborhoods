@@ -50,19 +50,15 @@ overlays = {
         new google.maps.LatLng(40.727258767439, -73.99151176214218)
     ],
     'East Harlem':[
-        new google.maps.LatLng(40.80575371550092, -73.94269153475761), 
-        new google.maps.LatLng(40.80497409762779, -73.9408890902996), 
-        new google.maps.LatLng(40.817836621370134, -73.93402263522148),
-        new google.maps.LatLng(40.80257021819871, -73.94294902682304), 
-        new google.maps.LatLng(40.8032848941508, -73.94466564059258), 
-        new google.maps.LatLng(40.78795015792346, -73.95573779940605), 
-        new google.maps.LatLng(40.782881118849595, -73.94389316439629),
-        new google.maps.LatLng(40.78704035888754, -73.93848583102226), 
-        new google.maps.LatLng(40.791134356390245, -73.93634006381035), 
-        new google.maps.LatLng(40.79542303542751, -73.9295594394207), 
-        new google.maps.LatLng(40.79984138468655, -73.92904445528984), 
-        new google.maps.LatLng(40.803349864310306, -73.93041774630547),
-        new google.maps.LatLng(40.80731292377169, -73.93385097384453)
+        new google.maps.LatLng(40.803349864310306, -73.94469916820526),
+        new google.maps.LatLng(40.78788517269141, -73.95568549633026),
+        new google.maps.LatLng(40.7829461089784, -73.94401252269745),
+        new google.maps.LatLng(40.786845400329625, -73.9386910200119),
+        new google.maps.LatLng(40.790614497682476, -73.93663108348846),
+        new google.maps.LatLng(40.795812901603064, -73.92942130565643),
+        new google.maps.LatLng(40.800945926051526, -73.92950713634491),
+        new google.maps.LatLng(40.80581868324361, -73.94100844860077),
+        new google.maps.LatLng(40.80270015985332, -73.9430683851242)
     ],
     'Battery Park':[
         new google.maps.LatLng(40.704879678521486, -74.01733003556728),
