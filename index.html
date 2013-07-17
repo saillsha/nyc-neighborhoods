@@ -16,13 +16,24 @@
       <div class="left">
         <ul id="locations" data-bind="foreach: locations">
           <li>
-            <label style="cursor:pointer; ">
-              <input data-bind="click: draw, attr: {'data-value': $data}" type="checkbox" checked>
+            <label class="line">
+              <input style="position:absolute; left:-9999px" data-bind="click: draw, attr: {'data-value': $data}" type="checkbox" checked>
+              <div class="checkbox image-checked" data-bind="style: { 'background-color': colors[overlays[$data].color] }"></div>
               <span data-bind="text: $data"></span>
             <label>
           </li>
         </ul>
       </div>
       <div class="right" id="map-canvas"></div>
+      <div id='info-window' style='display:none;'>
+          1. Region name:&nbsp;
+          <input id='region-name' type='text'><br/>
+          2. Region color:&nbsp;
+          <select>
+          </select><br/>
+          3. Click on the boundaries you wish to <br>
+             label with street names. These lines must <br> coincide with actual streets for expected results.<br>
+          <input type='button' value='enter' onclick='save()'>
+      </div>
   </body>
 </html>
