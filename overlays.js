@@ -1,8 +1,20 @@
-overlays = [
+
+colors = {
+    purple: '#7e1e9c', 
+    green: '#15b01a',
+    lightBlue: '#75bbfd', 
+    orange: '#f97306', 
+    pink: '#ff79e5',
+    gold: '#d9d71e', 
+    blue: '#069af3', 
+    red: '#ff000d'
+};
+
+regions = [
 {
     name: 'Central Park',
     //color to be shown in region
-    color: 'red',
+    color: colors['red'],
     //the polygon boundaries in lat lng
     path: [
         new google.maps.LatLng(40.7970474627213, -73.94907653331757),
@@ -10,13 +22,19 @@ overlays = [
         new google.maps.LatLng(40.76806170936613, -73.98237884044647),
         new google.maps.LatLng(40.800556090021466,-73.9580887556076)
     ],
-    //street_label[i] is true if the line connecting path[i] and path[i+1]
+    //street_label[i] contains the maps.Label object for the street connecting
+    //path[i] and path[i+1]
+    street_labels: [],
+    //has_label[i] is true if the line connecting path[i] and path[i+1]
     //should have a street label
-    street_label:[true, true, true, true]
+    has_label:[true, true, true, true]
+    /*dynamically created fields
+    poly: google.maps.Polygon object
+    */
 },
 {
     name: 'Chelsea',
-    color: 'purple',
+    color: colors['purple'],
     path:[
         new google.maps.LatLng(40.757205044580815, -74.00495231151581),
         new google.maps.LatLng(40.749792889699464, -73.98770034313202),
@@ -26,7 +44,9 @@ overlays = [
         new google.maps.LatLng(40.749987956993444, -74.00855720043182),
         new google.maps.LatLng(40.75401921961654, -74.00744140148163)
     ],
-        street_label:[true, true, true, true, true, true, true]
+    street_labels: [],    
+    has_label:[true, true, true, true, true, true, true]
+}
 // },
 // 'Bowery':{
 //     color: 'green',
@@ -245,5 +265,4 @@ overlays = [
 //         new google.maps.LatLng(40.72423412682422, -73.99267047643661),
 //         new google.maps.LatLng(40.72560011057546, -73.99653285741806)
 //     ]
- }
-};
+];

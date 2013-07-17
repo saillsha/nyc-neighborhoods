@@ -23,11 +23,6 @@ body {
     height:90%;
 }
 
-#info-window{
-    position:relative;
-    left:-9999px;
-}
-
 #locations{
     padding-left:5px;
 }
