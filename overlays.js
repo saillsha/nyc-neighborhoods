@@ -10,6 +10,10 @@ colors = {
     red: '#ff000d'
 };
 
+/*
+each region object encapsulates information about a particular
+region of the map.
+*/
 regions = [
 {
     name: 'Central Park',
@@ -28,7 +32,7 @@ regions = [
     //has_label[i] is true if the line connecting path[i] and path[i+1]
     //should have a street label
     has_label:[true, true, true, true]
-    /*dynamically created fields
+    /*dynamically created field:
     poly: google.maps.Polygon object
     */
 },
@@ -265,4 +269,5 @@ regions = [
 //         new google.maps.LatLng(40.72423412682422, -73.99267047643661),
 //         new google.maps.LatLng(40.72560011057546, -73.99653285741806)
 //     ]
+
 ];

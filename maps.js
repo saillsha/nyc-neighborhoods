@@ -1,5 +1,6 @@
 maps = {};
 
+//initializes all the maps stuff
 maps.init = function(){
     gmap = new GMaps({
         div: '#map-canvas',
@@ -28,7 +29,7 @@ maps.init = function(){
     maps.popup_content = firstPart.concat(selectBox, secondPart);
 
     maps.drawingManager.setMap(gmap.map);
-    //handler called after the polygon is copmlete
+    //handler called after the polygon is complete
     //i.e. when the user drawn path becomes closed
     google.maps.event.addListener(maps.drawingManager, 'polygoncomplete', 
         maps.polyComplete);
@@ -117,14 +118,14 @@ maps.createLabel = function(region, i){
             }
         },
     });
-
 }
 
+//called when user finishes drawing polygon
 maps.polyComplete = function(e){
     var avgLat = avgLng = 0;
     var path = e.getPath().b;
 
-    //initializing new polygon object
+    //initializing new region object with some default values
     maps.newRegion = {
         poly: e,
         lines: [],
@@ -148,13 +149,13 @@ maps.polyComplete = function(e){
         });
         line.setMap(gmap.map);
         maps.newRegion['lines'].push(line);
+        maps.newRegion.has_label[i] = false;
         //clickLine actually returns the hander function
         //it's just a wrapper needed to save the line state
         google.maps.event.addListener(line, 'click', maps.clickLine(i, line));
 
         //determine the centroid of the region for
         //anchoring the pop up window
-        console.log('new google.maps.LatLng('+path[i].lat()+", "+path[i].lng()+"),");
         avgLat += path[i].lat();
         avgLng += path[i].lng();
     }
@@ -179,6 +180,26 @@ maps.savePoly = function(){
     delete maps.newRegion.lines
     maps.newRegion['name'] = $('#region-name').val();
     maps.newRegion['color'] = colors[$('#region-color option:selected').val()];
+
+    /*console log statements for creating region object*/
+    logStr = "";
+    logStr += "{\n\tname: '"+maps.newRegion['name']+"',\n";
+    logStr += "\tcolor: '"+maps.newRegion['color']+"',\n";
+    logStr += "\tpath: [\n";
+    for(var i=0; i<maps.newRegion['path'].length; i++){
+        logStr += "\t\tnew google.maps.LatLng("+
+            maps.newRegion.path[i].lat()+", "+
+            maps.newRegion.path[i].lng()+"),\n";
+    }
+    logStr += "\t],\n\tstreet_labels: [],\n";
+    logStr += "has_label: [" + maps.newRegion.has_label[0];
+    for(var i=1; i<maps.newRegion.has_label.length; i++){
+        logStr += ", "+maps.newRegion.has_label[i];
+    }
+    logStr += "]\n},";
+    console.log(logStr);
+
+
     mapVM.regions.push(maps.newRegion);
     maps.popup.close();
     maps.popup.setMap(null);
