@@ -50,224 +50,351 @@ regions = [
     ],
     street_labels: [],    
     has_label:[true, true, true, true, true, true, true]
-}
-// },
-// 'Bowery':{
-//     color: 'green',
-//     path:[
-//         new google.maps.LatLng(40.72699858870393, -73.99155467748642),
-//         new google.maps.LatLng(40.720201058841496, -73.99404376745224),
-//         new google.maps.LatLng(40.716102691059206, -73.9960178732872),
-//         new google.maps.LatLng(40.71502926732618, -73.99249881505966),
-//         new google.maps.LatLng(40.72296568823725, -73.98863643407822),
-//         new google.maps.LatLng(40.72520983236449, -73.98709148168564)
-//     ]
-// },
-// 'Greenwich Village':{
-//     color: 'orange',
-//     path:[
-//         new google.maps.LatLng(40.734868545421286, -73.99086803197861),
-//         new google.maps.LatLng(40.73171417041241, -73.9914259314537),
-//         new google.maps.LatLng(40.72550254123729, -73.99679034948349),
-//         new google.maps.LatLng(40.72829947220741, -74.00279849767685),
-//         new google.maps.LatLng(40.72914503284784, -74.01078075170517),
-//         new google.maps.LatLng(40.73935595523296, -74.00975078344345),
-//         new google.maps.LatLng(40.73935595523296, -74.0064463019371),
-//         new google.maps.LatLng(40.74101426921151, -74.00537341833115)
-//     ]
-// },
-// 'West Village':{
-//     color: 'blue',
-//     path:[
-//         new google.maps.LatLng(40.74104678475861, -74.00537341833115), 
-//         new google.maps.LatLng(40.73733991001137, -73.99683326482773), 
-//         new google.maps.LatLng(40.730901162924205, -74.00155395269394),
-//         new google.maps.LatLng(40.728266950429735, -74.0029701590538), 
-//         new google.maps.LatLng(40.72911251148341, -74.01078075170517), 
-//         new google.maps.LatLng(40.73945350425846, -74.00979369878769), 
-//         new google.maps.LatLng(40.739420987932526, -74.00653213262558)
-//     ]
-// },
-// 'East Village':{
-//     color: 'purple',
-//     path:[
-//         new google.maps.LatLng(40.724169079279605, -73.99267047643661),
-//         new google.maps.LatLng(40.718672332110465, -73.97486060857773),
-//         new google.maps.LatLng(40.726835976477936, -73.97189944982529),
-//         new google.maps.LatLng(40.7332425975975, -73.98722022771835),
-//         new google.maps.LatLng(40.727258767439, -73.99151176214218)
-//     ]
-// },
-// 'East Harlem':{
-//     color: 'purple',
-//     path:[
-//         new google.maps.LatLng(40.803349864310306, -73.94469916820526),
-//         new google.maps.LatLng(40.78788517269141, -73.95568549633026),
-//         new google.maps.LatLng(40.7829461089784, -73.94401252269745),
-//         new google.maps.LatLng(40.786845400329625, -73.9386910200119),
-//         new google.maps.LatLng(40.790614497682476, -73.93663108348846),
-//         new google.maps.LatLng(40.795812901603064, -73.92942130565643),
-//         new google.maps.LatLng(40.800945926051526, -73.92950713634491),
-//         new google.maps.LatLng(40.80581868324361, -73.94100844860077),
-//         new google.maps.LatLng(40.80270015985332, -73.9430683851242)
-//     ]
-// },
-// 'Battery Park':{
-//     color:'gold',
-//     path:[
-//         new google.maps.LatLng(40.704879678521486, -74.01733003556728),
-//         new google.maps.LatLng(40.70468447896035, -74.01419721543789),
-//         new google.maps.LatLng(40.70315539593834, -74.0145405381918),
-//         new google.maps.LatLng(40.70237457404695, -74.01372514665127),
-//         new google.maps.LatLng(40.70061769132372, -74.01411138474941),
-//         new google.maps.LatLng(40.701854021034066, -74.0163429826498),
-//         new google.maps.LatLng(40.703513269579396, -74.01767335832119) 
-//     ]
-// },
-// 'Battery Park City':{
-//     color:'green',
-//     path:[
-//         new google.maps.LatLng(40.71821695991492, -74.01265226304531),
-//         new google.maps.LatLng(40.70484714530104, -74.01668630540371),
-//         new google.maps.LatLng(40.70471701226029, -74.01883207261562),
-//         new google.maps.LatLng(40.706961771575806, -74.01904664933681),
-//         new google.maps.LatLng(40.70686417491799, -74.01853166520596), 
-//         new google.maps.LatLng(40.70787266681827, -74.01793085038662), 
-//         new google.maps.LatLng(40.708132920313375, -74.01870332658291),
-//         new google.maps.LatLng(40.71229683790948, -74.0178021043539), 
-//         new google.maps.LatLng(40.712101660088756, -74.01664339005947),
-//         new google.maps.LatLng(40.71337030569675, -74.01621423661709), 
-//         new google.maps.LatLng(40.71366306663506, -74.01754461228848), 
-//         new google.maps.LatLng(40.718542226086726, -74.01664339005947) 
-//     ]
-// },
-// 'Finanial District':{
-//     color:'pink',
-//     path:[
-//         new google.maps.LatLng(40.71720862468233, -74.01290975511074), 
-//         new google.maps.LatLng(40.71421605600625, -74.00621496140957), 
-//         new google.maps.LatLng(40.711841422104456, -74.00814615190029),
-//         new google.maps.LatLng(40.7114835932153, -74.00763116776943),
-//         new google.maps.LatLng(40.712101660088756, -74.00544248521328),
-//         new google.maps.LatLng(40.70787266681827, -74.00012098252773),
-//         new google.maps.LatLng(40.70208176347777, -74.00930486619473),
-//         new google.maps.LatLng(40.70113825399865, -74.01406846940517),
-//         new google.maps.LatLng(40.702342039602826, -74.01372514665127),
-//         new google.maps.LatLng(40.703122861875606, -74.01449762284756),
-//         new google.maps.LatLng(40.70484714530104, -74.01411138474941),
-//         new google.maps.LatLng(40.704749545544296, -74.01672922074795)
-//     ]
-// },
-// 'Lower East Side':{
-//     color:'blue',
-//     path:[
-//         new google.maps.LatLng(40.718672332110465, -73.97471509873867),
-//         new google.maps.LatLng(40.72296568823725, -73.98870550096035),
-//         new google.maps.LatLng(40.71457387021076, -73.99265371263027),
-//         new google.maps.LatLng(40.70959682727199, -73.99188123643398),
-//         new google.maps.LatLng(40.71089805088516, -73.97973619401455),
-//         new google.maps.LatLng(40.71219924907064, -73.97763334214687) 
-//     ]
-// },
-// 'Little Italy':{
-//     color: 'orange',
-//     path:[
-//         new google.maps.LatLng(40.71945296291278, -73.99438709020615),
-//         new google.maps.LatLng(40.72107924768216, -73.99824947118759),
-//         new google.maps.LatLng(40.718444646402084, -74.00056689977646),
-//         new google.maps.LatLng(40.71711104304284, -73.99876445531845),
-//         new google.maps.LatLng(40.716200274176735, -73.99618953466415)
-//     ]
-// },
-// 'NoLita':{
-//     color:'lightBlue',
-//     path:[
-//         new google.maps.LatLng(40.72504721576778, -73.99533122777939),
-//         new google.maps.LatLng(40.722217623379684, -73.9971336722374),
-//         new google.maps.LatLng(40.72098167171645, -73.99816364049911),
-//         new google.maps.LatLng(40.71951801506643, -73.99438709020615),
-//         new google.maps.LatLng(40.72413655548345, -73.9925417304039)
-//     ]
-// },
-// 'TriBeCa':{
-//     color:'purple',
-//     path:[
-//         new google.maps.LatLng(40.725925340669626, -74.01112407445908),
-//         new google.maps.LatLng(40.71938791069558, -74.00189727544785),
-//         new google.maps.LatLng(40.711418533210676, -74.00859206914902),
-//         new google.maps.LatLng(40.71366306663506, -74.01387065649033) 
-//     ]
-// },
-// 'SoHo':{
-//     color:'red',
-//     path:[
-//         new google.maps.LatLng(40.72829947220741, -74.0029701590538),
-//         new google.maps.LatLng(40.72355112443508, -74.00481551885605),
-//         new google.maps.LatLng(40.72208752428535, -74.0055450797081),
-//         new google.maps.LatLng(40.718444646402084, -74.00065273046494),
-//         new google.maps.LatLng(40.72231519753357, -73.9971336722374), 
-//         new google.maps.LatLng(40.725112262454154, -73.99550288915634) 
-//     ]
-// },
-// 'Two Bridges':{
-//     color:'orange',
-//     path:[
-//         new google.maps.LatLng(40.713760653328414, -73.99262756109238),
-//         new google.maps.LatLng(40.713402834753445, -73.99824947118759),
-//         new google.maps.LatLng(40.70936911052541, -74.00189727544785),
-//         new google.maps.LatLng(40.70787266681827, -74.00000900030136),
-//         new google.maps.LatLng(40.70881608089887, -73.99782031774521),
-//         new google.maps.LatLng(40.70959682727199, -73.99189800024033)
-//     ]
-// },
-// 'Chinatown':{
-//     color:'pink',
-//     path:[
-//         new google.maps.LatLng(40.71932285841479, -74.00194019079208),
-//         new google.maps.LatLng(40.716200274176735, -74.00455802679062),
-//         new google.maps.LatLng(40.71333777662415, -73.99824947118759),
-//         new google.maps.LatLng(40.71385823987875, -73.99279922246933),
-//         new google.maps.LatLng(40.71496421078612, -73.99258464574814),
-//         new google.maps.LatLng(40.71704598853704, -73.99872153997421)
-//     ]
-// },
-// 'Civic Center':{
-//     color: 'lightBlue',
-//     path:[
-//         new google.maps.LatLng(40.71623280185081, -74.00460094213486),
-//         new google.maps.LatLng(40.71337030569675, -73.99820655584335),
-//         new google.maps.LatLng(40.70923898632059, -74.00202602148056),
-//         new google.maps.LatLng(40.71226430831242, -74.00545924901962),
-//         new google.maps.LatLng(40.71154865315637, -74.0075621008873),
-//         new google.maps.LatLng(40.711873951908125, -74.0081200003624)
-//     ]
-// },
-// 'Meatpacking District':{
-//     color:'gold',
-//     path:[
-//         new google.maps.LatLng(40.74257499754292, -74.00893539190292),
-//         new google.maps.LatLng(40.74104678475861, -74.00545924901962),
-//         new google.maps.LatLng(40.73932343885932, -74.00657504796982),
-//         new google.maps.LatLng(40.73945350425846, -74.00979369878769)
-//     ]
-// },
-// 'Hudson Square':{
-//     color:'green',
-//     path: [
-//         new google.maps.LatLng(40.72911251148341, -74.01078075170517), 
-//         new google.maps.LatLng(40.725892817731726, -74.01108115911484),
-//         new google.maps.LatLng(40.72205499947202, -74.00571674108505), 
-//         new google.maps.LatLng(40.72820190682675, -74.00301307439804) 
-//     ]
-// },
-// 'NoHo':{
-//     color: 'pink',
-//     path:[
-//         new google.maps.LatLng(40.73054343648237, -73.99237006902695),
-//         new google.maps.LatLng(40.72960033028089, -73.98992389440536),
-//         new google.maps.LatLng(40.72712867819861, -73.9916405081749),
-//         new google.maps.LatLng(40.72423412682422, -73.99267047643661),
-//         new google.maps.LatLng(40.72560011057546, -73.99653285741806)
-//     ]
+},
+{
+    name: 'Battery Park',
+    color: '#7e1e9c',
+    path: [
+        new google.maps.LatLng(40.70468447896035, -74.01436015963554),
+        new google.maps.LatLng(40.704879678521486, -74.01732131838799),
+        new google.maps.LatLng(40.70326926503271, -74.01757881045341),
+        new google.maps.LatLng(40.701772684258295, -74.01629135012627),
+        new google.maps.LatLng(40.70066649424731, -74.01420995593071),
+        new google.maps.LatLng(40.70243964288751, -74.01378080248833),
+        new google.maps.LatLng(40.70317166296373, -74.0144245326519),
+    ],
+    street_labels: [],
+has_label: [true, false, false, false, false, false, true]
+},
+{
+    name: 'Battery Park City',
+    color: '#75bbfd',
+    path: [
+        new google.maps.LatLng(40.71834706657437, -74.01258319616318),
+        new google.maps.LatLng(40.707742539689306, -74.01558727025986),
+        new google.maps.LatLng(40.70494474491473, -74.01661723852158),
+        new google.maps.LatLng(40.70465194564456, -74.01880592107773),
+        new google.maps.LatLng(40.706799110400006, -74.01897758245468),
+        new google.maps.LatLng(40.70647378685649, -74.01829093694687),
+        new google.maps.LatLng(40.707937730287384, -74.01773303747177),
+        new google.maps.LatLng(40.70803532537189, -74.01884883642197),
+        new google.maps.LatLng(40.71229683790948, -74.01773303747177),
+        new google.maps.LatLng(40.71200407096382, -74.01644557714462),
+        new google.maps.LatLng(40.71359800876, -74.01610225439072),
+        new google.maps.LatLng(40.713760653328414, -74.01738971471786),
+        new google.maps.LatLng(40.71850969954106, -74.01670306921005),
+    ],
+    street_labels: [],
+has_label: [true, false, false, false, false, false, false, false, false, false, false, false, false]
+},
+{
+    name: 'Financial District',
+    color: '#15b01a',
+    path: [
+        new google.maps.LatLng(40.71719236108568, -74.01281520724297),
+        new google.maps.LatLng(40.71421605600625, -74.00631353259087),
+        new google.maps.LatLng(40.71190648169586, -74.00820180773735),
+        new google.maps.LatLng(40.71156491813167, -74.0075795352459),
+        new google.maps.LatLng(40.71206913039633, -74.00521919131279),
+        new google.maps.LatLng(40.70790519856078, -73.9999620616436),
+        new google.maps.LatLng(40.70227697066692, -74.00919288396835),
+        new google.maps.LatLng(40.701008113711325, -74.01390954852104),
+        new google.maps.LatLng(40.702569780377935, -74.01356622576714),
+        new google.maps.LatLng(40.703285532030286, -74.01429578661919),
+        new google.maps.LatLng(40.704749545544296, -74.01420995593071),
+        new google.maps.LatLng(40.70489594512577, -74.0165488421917),
+    ],
+    street_labels: [],
+has_label: [true, true, false, false, false, true, false, false, false, false, false, true]
+}, 
+{
+    name: 'Civic Center',
+    color: '#f97306',
+    path: [
+        new google.maps.LatLng(40.71631412096641, -74.00461837649345),
+        new google.maps.LatLng(40.711955276347744, -74.008137434721),
+        new google.maps.LatLng(40.71161371303385, -74.00760099291801),
+        new google.maps.LatLng(40.71213418976525, -74.00509044528008),
+        new google.maps.LatLng(40.70936911052541, -74.00180742144585),
+        new google.maps.LatLng(40.71328898298542, -73.99820253252983),
+    ],
+    street_labels: [],
+has_label: [true, false, false, false, true, true]
+}, 
+{
+    name: 'TriBeCa',
+    color: '#069af3',
+    path: [
+        new google.maps.LatLng(40.71937164763133, -74.00195762515068),
+        new google.maps.LatLng(40.726006647944835, -74.01109859347343),
+        new google.maps.LatLng(40.71442749190498, -74.01358768343925),
+        new google.maps.LatLng(40.71205286554415, -74.008137434721),
+    ],
+    street_labels: [],
+has_label: [true, true, true, false /*should be TRUE*/]
+}, 
+{
+    name: 'Two Bridges',
+    color: '#ff000d',
+    path: [
+        new google.maps.LatLng(40.70969441992499, -73.99197980761528),
+        new google.maps.LatLng(40.71392329749949, -73.9925591647625),
+        new google.maps.LatLng(40.71333777662415, -73.99811670184135),
+        new google.maps.LatLng(40.70936911052541, -74.00180742144585),
+        new google.maps.LatLng(40.70790519856078, -73.99989768862724),
+        new google.maps.LatLng(40.70886487781536, -73.99758026003838),
+    ],
+    street_labels: [],
+has_label: [true, true, true, false, false, false]
+}, 
+{
+    name: 'Chinatown',
+    color: '#7e1e9c',
+    path: [
+        new google.maps.LatLng(40.71631412096641, -74.0045540034771),
+        new google.maps.LatLng(40.719404173755834, -74.00189325213432),
+        new google.maps.LatLng(40.71706225216946, -73.99863168597221),
+        new google.maps.LatLng(40.71504553145126, -73.9925591647625),
+        new google.maps.LatLng(40.713955826286046, -73.99270936846733),
+        new google.maps.LatLng(40.71333777662415, -73.99837419390678),
+    ],
+    street_labels: [],
+has_label: [true, false, true, false, true, true]
+}, 
+{
+    name: 'Hudson Square',
+    color: '#d9d71e',
+    path: [
+        new google.maps.LatLng(40.72914503284784, -74.01073381304741),
+        new google.maps.LatLng(40.72597412504668, -74.01107713580132),
+        new google.maps.LatLng(40.721941162500265, -74.00547668337822),
+        new google.maps.LatLng(40.72838077658201, -74.00290176272392),
+    ],
+    street_labels: [],
+has_label: [false, true, true, true]
+}, 
+{
+    name: 'SoHo',
+    color: '#15b01a',
+    path: [
+        new google.maps.LatLng(40.72838077658201, -74.00292322039604),
+        new google.maps.LatLng(40.72192490005981, -74.0054552257061),
+        new google.maps.LatLng(40.718477172979526, -74.00054141879082),
+        new google.maps.LatLng(40.72239650921919, -73.99710819125175),
+        new google.maps.LatLng(40.72516104742719, -73.99539157748222),
+        new google.maps.LatLng(40.72581151031746, -73.9979450404644),
+    ],
+    street_labels: [],
+has_label: [true, true, true, false, false, true]
+}, 
+{
+    name: 'NoLita',
+    color: '#ff000d',
+    path: [
+        new google.maps.LatLng(40.72516104742719, -73.99530574679375),
+        new google.maps.LatLng(40.72342102794725, -73.99665758013725),
+        new google.maps.LatLng(40.72078651935595, -73.99768754839897),
+        new google.maps.LatLng(40.71942043681212, -73.99438306689262),
+        new google.maps.LatLng(40.72412029357941, -73.99260208010674),
+    ],
+    street_labels: [],
+    has_label: [true, false, false /*should be true*/, true, true]
+},
+{
+    name: 'Little Italy',
+    color: '#f97306',
+    path: [
+        new google.maps.LatLng(40.71943669986444, -73.99435959756374),
+        new google.maps.LatLng(40.72107111635715, -73.99824343621731),
+        new google.maps.LatLng(40.718444646402084, -74.00055013597012),
+        new google.maps.LatLng(40.71704598853704, -73.9986189454794),
+        new google.maps.LatLng(40.71618401033376, -73.99601384997368),
+    ],
+    street_labels: [],
+    has_label: [true, true, false, true, true]
+}, 
+{
+    name: 'Bowery',
+    color: '#069af3',
+    path: [
+        new google.maps.LatLng(40.72415281738351, -73.99260208010674),
+        new google.maps.LatLng(40.71942043681212, -73.99442598223686),
+        new google.maps.LatLng(40.71618401033376, -73.99599239230156),
+        new google.maps.LatLng(40.71501300319713, -73.99249479174614),
+        new google.maps.LatLng(40.72294942604715, -73.98850366473198),
+    ],
+    street_labels: [],
+has_label: [true, false, true, true, true]
+}, 
+{
+    name: 'Lower East Side',
+    color: '#ff79e5',
+    path: [
+        new google.maps.LatLng(40.72296568823725, -73.9885251224041),
+        new google.maps.LatLng(40.71504553145126, -73.99249479174614),
+        new google.maps.LatLng(40.70969441992499, -73.9918939769268),
+        new google.maps.LatLng(40.7109793765167, -73.9795558154583),
+        new google.maps.LatLng(40.71213418976525, -73.97777482867241),
+        new google.maps.LatLng(40.717273679029205, -73.97524282336235),
+        new google.maps.LatLng(40.718704858576665, -73.97498533129692),
+    ],
+    street_labels: [],
+has_label: [true, false /*should be true*/, false, false, false, false, true]
+}, 
+{
+    name: 'East Village',
+    color: '#7e1e9c',
+    path: [
+        new google.maps.LatLng(40.72680345398506, -73.97189542651176),
+        new google.maps.LatLng(40.73330763627338, -73.98723766207695),
+        new google.maps.LatLng(40.728315733090284, -73.99077817797661),
+        new google.maps.LatLng(40.727388856425094, -73.9914433658123),
+        new google.maps.LatLng(40.72410403167143, -73.99251624941826),
+        new google.maps.LatLng(40.71876991146138, -73.97511407732964),
+        new google.maps.LatLng(40.72220136100681, -73.97444888949394),
+    ],
+    street_labels: [],
+has_label: [true, true, false, false, false /*should be true*/, false, false]
+}, 
+{
+    name: 'Greenwich Village',
+    color: '#069af3',
+    path: [
+        new google.maps.LatLng(40.74099801143199, -74.00536939501762),
+        new google.maps.LatLng(40.739339697048116, -74.00650665163994),
+        new google.maps.LatLng(40.739404729763585, -74.00987550616264),
+        new google.maps.LatLng(40.72914503284784, -74.01058360934258),
+        new google.maps.LatLng(40.7283482548441, -74.0028803050518),
+        new google.maps.LatLng(40.725844033295076, -73.9979450404644),
+        new google.maps.LatLng(40.72548627966701, -73.9965932071209),
+        new google.maps.LatLng(40.73173043046086, -73.9914433658123),
+        new google.maps.LatLng(40.734852286139734, -73.99075672030449),
+    ],
+    street_labels: [],
+    has_label: [false, true, true, true, true, false, true, false, true]
+}, 
+{
+    name: 'West Village',
+    color: '#ff79e5',
+    path: [
+        new google.maps.LatLng(40.73106376521653, -74.00148555636406),
+        new google.maps.LatLng(40.73733991001137, -73.99687215685844),
+        new google.maps.LatLng(40.740981753648505, -74.0053479373455),
+        new google.maps.LatLng(40.739372213413816, -74.00648519396782),
+        new google.maps.LatLng(40.739404729763585, -74.00989696383476),
+        new google.maps.LatLng(40.72914503284784, -74.0106050670147),
+        new google.maps.LatLng(40.7283482548441, -74.00290176272392),
+    ],
+    street_labels: [],
+has_label: [true, true, false, true, false, false, false]
+}, 
+{
+    name: 'NoHo',
+    color: '#d9d71e',
+    path: [
+        new google.maps.LatLng(40.73491732324207, -73.99073526263237),
+        new google.maps.LatLng(40.73171417041241, -73.9914433658123),
+        new google.maps.LatLng(40.72545375651455, -73.99670049548149),
+        new google.maps.LatLng(40.7251285241158, -73.99528428912163),
+        new google.maps.LatLng(40.72415281738351, -73.9925591647625),
+        new google.maps.LatLng(40.72737259531574, -73.99140045046806),
+        new google.maps.LatLng(40.7333238959324, -73.98715183138847),
+    ],
+    street_labels: [],
+has_label: [false, true, false, true, true, true, true]
+}, 
+{
+    name: 'Flatiron District',
+    color: '#15b01a',
+    path: [
+        new google.maps.LatLng(40.742932659294304, -73.99275630712509),
+        new google.maps.LatLng(40.737242357886416, -73.99687618017197),
+        new google.maps.LatLng(40.735226248609976, -73.99172633886337),
+        new google.maps.LatLng(40.7370797706936, -73.99035304784775),
+        new google.maps.LatLng(40.73652697126574, -73.98902267217636),
+        new google.maps.LatLng(40.740168859407845, -73.98631900548935),
+    ],
+    street_labels: [],
+has_label: [true, true, false, false, true, true]
+}, 
+{
+    name: 'Gramercy Park',
+    color: '#ff79e5',
+    path: [
+        new google.maps.LatLng(40.74018511739003, -73.98633643984795),
+        new google.maps.LatLng(40.73516121180963, -73.9899842441082),
+        new google.maps.LatLng(40.73438076524639, -73.98985549807549),
+        new google.maps.LatLng(40.73135644834142, -73.9825813472271),
+        new google.maps.LatLng(40.73693344188031, -73.97846147418022),
+    ],
+    street_labels: [],
+has_label: [true, false, true, true, true]
+}, 
+{
+    name: 'Meatpacking District',
+    color: '#15b01a',
+    path: [
+        new google.maps.LatLng(40.74260751232707, -74.00895282626152),
+        new google.maps.LatLng(40.740770402101624, -74.00918886065483),
+        new google.maps.LatLng(40.73938847159069, -74.00987550616264),
+        new google.maps.LatLng(40.739404729763585, -74.00652810931206),
+        new google.maps.LatLng(40.740965495861055, -74.0053479373455),
+    ],
+    street_labels: [],
+has_label: [false, false, true, true, true]
+},
+{
+    name: 'Stuyvesant Town',
+    color: '#d9d71e',
+    path: [
+        new google.maps.LatLng(40.7353238036913, -73.9748565852642),
+        new google.maps.LatLng(40.73691718310342, -73.9784400165081),
+        new google.maps.LatLng(40.73135644834142, -73.98255988955498),
+        new google.maps.LatLng(40.726819715233496, -73.971938341856),
+        new google.maps.LatLng(40.72886860074364, -73.97168084979057),
+        new google.maps.LatLng(40.73020196853932, -73.97256061434746),
+        new google.maps.LatLng(40.73124262727918, -73.97376224398613),
+    ],
+    street_labels: [],
+has_label: [true, true, true, false, false, false, true]
+},  
+{
+    name: 'Korea Town',
+    color: '#f97306',
+    path: [
+        new google.maps.LatLng(40.7485086823967, -73.98869678378105),
+        new google.maps.LatLng(40.74717568149654, -73.98554250597954),
+        new google.maps.LatLng(40.74590768023386, -73.98642227053642),
+        new google.maps.LatLng(40.747289475299446, -73.9896409213543),
+    ],
+    street_labels: [],
+has_label: [true, true, true, true]
+}, 
+{
+    name: 'Garment District',
+    color: '#75bbfd',
+    path: [
+        new google.maps.LatLng(40.758472830416466, -73.99264499545097),
+        new google.maps.LatLng(40.75336903249926, -73.99627134203911),
+        new google.maps.LatLng(40.74841114665152, -73.98455545306206),
+        new google.maps.LatLng(40.753499070431374, -73.98088619112968),
+    ],
+    street_labels: [],
+has_label: [true, true, true, true]
+}, 
+{
+    name: 'Kips Bay',
+    color: '#ff000d',
+    path: [
+        new google.maps.LatLng(40.746444145257094, -73.97977039217949),
+        new google.maps.LatLng(40.739518536862654, -73.98472711443901),
+        new google.maps.LatLng(40.73535632201996, -73.97500678896904),
+        new google.maps.LatLng(40.736835889159316, -73.97481366991997),
+        new google.maps.LatLng(40.73919337320588, -73.97313997149467),
+        new google.maps.LatLng(40.743192775723635, -73.97211000323296),
+    ],
+    street_labels: [],
+has_label: [true, true, false, false, false, true]
+}, 
 
 ];

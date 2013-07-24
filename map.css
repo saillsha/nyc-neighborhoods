@@ -81,3 +81,12 @@ div.street-label{
   border-right:10px solid transparent;
   border-top:10px solid #336699;
 }
+
+#info-window{
+  font-size: 12px;
+  width: 300px;
+  background-color:white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 4px;
+}

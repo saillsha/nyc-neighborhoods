@@ -122,7 +122,8 @@ maps.createLabel = function(region, i){
 
 //called when user finishes drawing polygon
 maps.polyComplete = function(e){
-    var avgLat = avgLng = 0;
+    var maxLng = -180;
+    var minLat = 180;
     var path = e.getPath().b;
 
     //initializing new region object with some default values
@@ -154,20 +155,18 @@ maps.polyComplete = function(e){
         //it's just a wrapper needed to save the line state
         google.maps.event.addListener(line, 'click', maps.clickLine(i, line));
 
-        //determine the centroid of the region for
-        //anchoring the pop up window
-        avgLat += path[i].lat();
-        avgLng += path[i].lng();
+        minLat = Math.min(minLat, path[i].lat());
+        maxLng = Math.max(maxLng, path[i].lng());
     }
-    avgLat /= path.length;
-    avgLng /= path.length;
 
-    maps.popup = new google.maps.InfoWindow({
-        position: new google.maps.LatLng(avgLat, avgLng),
-        content: maps.popup_content
+    maps.popup = gmap.drawOverlay({
+        lat: minLat,
+        lng: maxLng, 
+        content: maps.popup_content,
+        layer: 'floatPane',
+        verticalAlign: 'bottom',
+        horizontalAlign: 'right'
     });
-    maps.popup.open(gmap.map);
-    //remove user drawn polygon
     e.setMap(null); 
 }
 
@@ -201,7 +200,8 @@ maps.savePoly = function(){
 
 
     mapVM.regions.push(maps.newRegion);
-    maps.popup.close();
+    maps.popup.setMap(null);
+
     maps.popup.setMap(null);
     maps.createOverlay(maps.newRegion);
 }
@@ -217,7 +217,10 @@ maps.draw = function(region){
         region.poly.setMap(null);
         $(checkbox).next().removeClass('image-checked');
         //remove all street labels associated with the region as well
-        $.each(region.street_labels, function(){ this.set('display', 'none');});
+        $.each(region.street_labels, function(index, street_label){ 
+            if(street_label) 
+                street_label.set('display', 'none');
+        });
     }
     //returning true is a KO specific thing that
     //causes other click handlers to fire
@@ -230,8 +233,10 @@ return function(){
     //if any previous regions were clicked, remove their street labels
     if(maps.prev_clicked){
         maps.prev_clicked.poly.setOptions({strokeWeight: 2});
-        $.each(maps.prev_clicked.street_labels, 
-            function(){ this.set('display', 'none'); });
+        $.each(maps.prev_clicked.street_labels, function(index, street_label){ 
+                if(street_label)
+                    street_label.set('display', 'none');
+        });
     }
     maps.prev_clicked = region;
     var path = region.path;
