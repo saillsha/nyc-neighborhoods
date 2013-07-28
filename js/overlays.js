@@ -21,10 +21,10 @@ regions = [
     color: colors['red'],
     //the polygon boundaries in lat lng
     path: [
-        new google.maps.LatLng(40.7970474627213, -73.94907653331757),
-        new google.maps.LatLng(40.76455136505513,-73.9727658033371),
-        new google.maps.LatLng(40.76806170936613, -73.98237884044647),
-        new google.maps.LatLng(40.800556090021466,-73.9580887556076)
+        new google.maps.LatLng(40.80065354924362, -73.95817525684834),
+        new google.maps.LatLng(40.768094211687796, -73.98199327290058),
+        new google.maps.LatLng(40.76435634049001, -73.97302396595478),
+        new google.maps.LatLng(40.79691751000055, -73.9491630345583),
     ],
     //street_label[i] contains the maps.Label object for the street connecting
     //path[i] and path[i+1]
@@ -131,7 +131,7 @@ has_label: [true, false, false, false, true, true]
         new google.maps.LatLng(40.71205286554415, -74.008137434721),
     ],
     street_labels: [],
-has_label: [true, true, true, false /*should be TRUE*/]
+has_label: [true, true, true, true]
 }, 
 {
     name: 'Two Bridges',
@@ -198,7 +198,7 @@ has_label: [true, true, true, false, false, true]
         new google.maps.LatLng(40.72412029357941, -73.99260208010674),
     ],
     street_labels: [],
-    has_label: [true, false, false /*should be true*/, true, true]
+    has_label: [true, false, true, true, true]
 },
 {
     name: 'Little Italy',
@@ -239,7 +239,7 @@ has_label: [true, false, true, true, true]
         new google.maps.LatLng(40.718704858576665, -73.97498533129692),
     ],
     street_labels: [],
-has_label: [true, false /*should be true*/, false, false, false, false, true]
+has_label: [true, true, false, false, false, false, true]
 }, 
 {
     name: 'East Village',
@@ -254,7 +254,7 @@ has_label: [true, false /*should be true*/, false, false, false, false, true]
         new google.maps.LatLng(40.72220136100681, -73.97444888949394),
     ],
     street_labels: [],
-has_label: [true, true, false, false, false /*should be true*/, false, false]
+has_label: [true, true, false, false, true, false, false]
 }, 
 {
     name: 'Greenwich Village',
@@ -396,5 +396,162 @@ has_label: [true, true, true, true]
     street_labels: [],
 has_label: [true, true, false, false, false, true]
 }, 
-
+{
+    name: 'Murray Hill',
+    color: '#ff79e5',
+    path: [
+        new google.maps.LatLng(40.75280011355584, -73.97928122431045),
+        new google.maps.LatLng(40.748069770416734, -73.96797303110361),
+        new google.maps.LatLng(40.74573698590986, -73.97020462900406),
+        new google.maps.LatLng(40.743176518476595, -73.97209290415049),
+        new google.maps.LatLng(40.74782592917611, -73.98297194391495),
+    ],
+    street_labels: [],
+has_label: [true, false, false, true, true]
+},
+{
+    name: 'Turtle Bay',
+    color: '#15b01a',
+    path: [
+        new google.maps.LatLng(40.752117404397765, -73.97559888660913),
+        new google.maps.LatLng(40.7584078163464, -73.97100694477558),
+        new google.maps.LatLng(40.75470190924651, -73.96229512989521),
+        new google.maps.LatLng(40.748720009353846, -73.96750934422022),
+    ],
+    street_labels: [],
+has_label: [true, true, false, true]
+},
+{
+    name: 'Hell\'s Kitchen',
+    color: '#ff79e5',
+    path: [
+        new google.maps.LatLng(40.75223118974426, -73.9934516698122),
+        new google.maps.LatLng(40.757205044580815, -74.00495298206806),
+        new google.maps.LatLng(40.76217852730423, -74.00130517780781),
+        new google.maps.LatLng(40.76373875892501, -73.9989448338747),
+        new google.maps.LatLng(40.76962180287486, -73.99478204548359),
+        new google.maps.LatLng(40.77157186825386, -73.99448163807392),
+        new google.maps.LatLng(40.77283938006045, -73.99340875446796),
+        new google.maps.LatLng(40.76923178293144, -73.98478277027607),
+        new google.maps.LatLng(40.7678666951022, -73.98568399250507),
+        new google.maps.LatLng(40.76676160346336, -73.98289449512959),
+    ],
+    street_labels: [],
+has_label: [true, false, false, false, false, false, true, false, false, true]
+},
+{
+    name: 'Theater District',
+    color: '#d9d71e',
+    path: [
+        new google.maps.LatLng(40.75362910810917, -73.98512609302998),
+        new google.maps.LatLng(40.75590472630009, -73.99083383381367),
+        new google.maps.LatLng(40.76481139691841, -73.98431070148945),
+        new google.maps.LatLng(40.76243856845115, -73.97873170673847),
+    ],
+    street_labels: [],
+has_label: [true, true, true, true]
+}, 
+{
+    name: 'Upper East Side',
+    color: '#15b01a',
+    path: [
+        new google.maps.LatLng(40.764291332174466, -73.97302396595478),
+        new google.maps.LatLng(40.78795015792346, -73.95572908222675),
+        new google.maps.LatLng(40.7829461089784, -73.94388444721699),
+        new google.maps.LatLng(40.781223849079005, -73.9442277699709),
+        new google.maps.LatLng(40.776836758909496, -73.94251115620136),
+        new google.maps.LatLng(40.77550432601707, -73.9425540715456),
+        new google.maps.LatLng(40.77215687670767, -73.94538648426533),
+        new google.maps.LatLng(40.77004432189692, -73.94796140491962),
+        new google.maps.LatLng(40.76458386909368, -73.95259626209736),
+        new google.maps.LatLng(40.76182096906601, -73.95508535206318),
+        new google.maps.LatLng(40.75977309846517, -73.95774610340595),
+        new google.maps.LatLng(40.758342802212724, -73.95894773304462),
+    ],
+    street_labels: [],
+has_label: [true, true, false, false, false, false, false, false, false, false, false, true]
+}, 
+{
+    name: 'Upper West Side',
+    color: '#069af3',
+    path: [
+        new google.maps.LatLng(40.80068603561921, -73.95817525684839),
+        new google.maps.LatLng(40.7686142466727, -73.98160703480244),
+        new google.maps.LatLng(40.769849313451346, -73.98431070148945),
+        new google.maps.LatLng(40.769166779384996, -73.98473985493183),
+        new google.maps.LatLng(40.772871880045216, -73.9934516698122),
+        new google.maps.LatLng(40.80572123160574, -73.9704061299563),
+    ],
+    street_labels: [],
+has_label: [true, false, false, true, true, true]
+}, 
+{
+    name: 'East Harlem',
+    color: '#ff79e5',
+    path: [
+        new google.maps.LatLng(40.7829461089784, -73.94385829567909),
+        new google.maps.LatLng(40.78795015792346, -73.95561710000038),
+        new google.maps.LatLng(40.8030899832907, -73.9445449411869),
+        new google.maps.LatLng(40.80250524727603, -73.94291415810585),
+        new google.maps.LatLng(40.80503906613369, -73.94102588295937),
+        new google.maps.LatLng(40.80581868324361, -73.9427424967289),
+        new google.maps.LatLng(40.817836621370134, -73.93398776650429),
+        new google.maps.LatLng(40.81225017494346, -73.9343310892582),
+        new google.maps.LatLng(40.80965166748856, -73.93510356545448),
+        new google.maps.LatLng(40.80731292377169, -73.93407359719276),
+        new google.maps.LatLng(40.8034148344062, -73.93046870827675),
+        new google.maps.LatLng(40.79750229524064, -73.92926707863808),
+        new google.maps.LatLng(40.79584539034771, -73.92952457070356),
+        new google.maps.LatLng(40.79444835997204, -73.93098369240761),
+        new google.maps.LatLng(40.79100439209487, -73.93656268715858),
+        new google.maps.LatLng(40.78645548149673, -73.93879428505898),
+        new google.maps.LatLng(40.78457084153033, -73.94132629036909),
+    ],
+    street_labels: [],
+has_label: [true, true, false, false, false, true, false, false, false, false, false, false, false, false, false, false, false]
+}, 
+{
+    name: 'Morningside Heights',
+    color: '#f97306',
+    path: [
+        new google.maps.LatLng(40.81796653313175, -73.96036393940449),
+        new google.maps.LatLng(40.81160055762011, -73.95469911396503),
+        new google.maps.LatLng(40.81104837789448, -73.95431287586695),
+        new google.maps.LatLng(40.80552632790066, -73.95830400288105),
+        new google.maps.LatLng(40.80315495364101, -73.95817525684834),
+        new google.maps.LatLng(40.80127078766092, -73.9595914632082),
+        new google.maps.LatLng(40.80507155036278, -73.968560770154),
+        new google.maps.LatLng(40.80806003141889, -73.96680124104023),
+        new google.maps.LatLng(40.809391811146064, -73.96538503468037),
+        new google.maps.LatLng(40.81582295653154, -73.96057851612568),
+        new google.maps.LatLng(40.81644005386475, -73.9604926854372),
+        new google.maps.LatLng(40.81715458044764, -73.96092183887959),
+    ],
+    street_labels: [],
+has_label: [true, false, true, false, false, true, false, false, true, false, false, false]
+}, 
+{
+    name: 'Harlem',
+    color: '#7e1e9c',
+    path: [
+        new google.maps.LatLng(40.817836621370134, -73.93405683338642),
+        new google.maps.LatLng(40.80575371550092, -73.94281156361103),
+        new google.maps.LatLng(40.806370906488624, -73.94427068531513),
+        new google.maps.LatLng(40.803934592883806, -73.9460731297732),
+        new google.maps.LatLng(40.8032848941508, -73.94448526203638),
+        new google.maps.LatLng(40.7968850217806, -73.9491630345583),
+        new google.maps.LatLng(40.80123830157151, -73.9595914632082),
+        new google.maps.LatLng(40.803187438792285, -73.9581323415041),
+        new google.maps.LatLng(40.80555881189126, -73.95826108753681),
+        new google.maps.LatLng(40.81108085918201, -73.95426996052265),
+        new google.maps.LatLng(40.818843430868, -73.9610505849123),
+        new google.maps.LatLng(40.82576077323659, -73.95504243671894),
+        new google.maps.LatLng(40.83001474287479, -73.9511800557375),
+        new google.maps.LatLng(40.8344957287081, -73.94963510334497),
+        new google.maps.LatLng(40.82803392073441, -73.93474347889423),
+        new google.maps.LatLng(40.82228595433684, -73.93435724079609),
+    ],
+    street_labels: [],
+has_label: [true, false, false, false, false, true, false, false, true, true, false, false, false, true, false, false]
+}, 
 ];

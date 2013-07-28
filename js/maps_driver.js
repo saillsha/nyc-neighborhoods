@@ -1,6 +1,7 @@
 $(document).ready(function(){
     mapVM = new MapViewModel();
     ko.applyBindings(mapVM, $('#locations')[0]);
+    $('#info-window').draggable();
     //hovering over a name on the checklist causes the corresponding region to be highlighted
     $('label.line').hover(
         function(){
@@ -16,7 +17,11 @@ $(document).ready(function(){
 var MapViewModel = function(){
     //array of regions
     var self = this;
-    self.regions = ko.observableArray(regions);
+    self.regions = ko.observableArray(
+        regions.sort(function(a, b){
+            return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+        })
+    );
     //maps region names to regions
     self.regionsMap = ko.computed(function(){
         var regMap = {};

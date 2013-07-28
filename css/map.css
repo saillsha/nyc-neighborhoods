@@ -44,7 +44,7 @@ div.checkbox{
 }
 
 .image-checked{
-  background-image:url('check-icon.png');
+  background-image:url('../images/check-icon.png');
 }
 
 div.street-label{
@@ -84,9 +84,15 @@ div.street-label{
 
 #info-window{
   font-size: 12px;
-  width: 300px;
+  width: 330px;
   background-color:white;
   border: 1px solid gray;
   border-radius: 3px;
   padding: 4px;
+  position:absolute;
+  top:200px;
+  left:500px;
+  cursor:move;
+  visibility: hidden;
+  z-index: 150;
 }

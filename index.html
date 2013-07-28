@@ -2,17 +2,20 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="css/map.css">
+      <link href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet">
+
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="knockout-2.2.1.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="js/knockout-2.2.1.js"></script>
     <script type="text/javascript"
       src="http://maps.googleapis.com/maps/api/js?libraries=drawing&key=AIzaSyANnq-KZEavTBCrs8BQ92AlpK0d1pkohGQ&sensor=false">
     </script>
-    <script type="text/javascript" src="gmaps.js"></script>
-    <script type="text/javascript" src="overlays.js"></script>
-    <script type="text/javascript" src="maps_driver.js"></script>
-    <script type="text/javascript" src="maps.label.js"></script>
-    <script type="text/javascript" src="maps.js"></script>
+    <script type="text/javascript" src="js/gmaps.js"></script>
+    <script type="text/javascript" src="js/overlays.js"></script>
+    <script type="text/javascript" src="js/maps_driver.js"></script>
+    <script type="text/javascript" src="js/maps.label.js"></script>
+    <script type="text/javascript" src="js/maps.js"></script>
   </head>
   <body>
       <div class="left">
@@ -27,5 +30,20 @@
         </ul>
       </div>
       <div class="right" id="map-canvas"></div>
+      <div id="info-window">
+        1. Region name:&nbsp;
+        <input id="region-name" type="text"><br/>
+        2. Region color:&nbsp;
+        <select id="region-color">
+        </select><br/>
+        3. Adjust the region as necessary and then click 
+        <input type="button" value="done" onclick="maps.editPoly()"><br/>
+        <p style="color:gray;margin-bottom:-10px">
+        4. Click on the lines you wish to label with street names. <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;They must coincide with actual streets for expected results.<br>
+        <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="save" onclick="maps.savePoly()" disabled>
+        <input type="button" value="cancel" onclick="maps.cancelPoly()">
+      </div>
   </body>
 </html>

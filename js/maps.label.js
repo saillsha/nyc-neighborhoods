@@ -1,3 +1,8 @@
+/*
+    This class inherits from Google Overlay and displays the labels of 
+    street names. 
+*/
+
 function StreetLabel(options){
     this.setMap(gmap.map);
     this.set('display', 'block');
@@ -12,8 +17,10 @@ function StreetLabel(options){
 StreetLabel.prototype = new google.maps.OverlayView;
 
 StreetLabel.prototype.onAdd = function(){
+    /* floatPane ensures the street label appears above all other overlays*/
     var pane = this.getPanes().floatPane.appendChild(this.div[0]);
     var self = this;
+    //event handler for toggling the visibility of the labels
     google.maps.event.addListener(this, 'display_changed',
         function(){ self.draw(); });
 }
@@ -28,6 +35,8 @@ StreetLabel.prototype.draw = function(){
     var projection = this.getProjection();
     var position1 = projection.fromLatLngToDivPixel(this.point1);
     var position2 = projection.fromLatLngToDivPixel(this.point2);
+    //We need to calculate the angle of rotation and x,y position
+    //of the street label so that it is centered and aligned with the boundary
     var x1 = position1.x, y1 = position1.y,
         x2 = position2.x, y2 = position2.y;
     var theta = Math.atan(Math.abs(y1 - y2)/
