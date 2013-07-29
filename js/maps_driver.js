@@ -11,6 +11,14 @@ $(document).ready(function(){
             mapVM.regionsMap()[$(this).find('span').text()].poly.setOptions({fillOpacity: .35});
         }
     );
+    $(window).resize(function(){
+        $('#try-me').css('visibility', 'hidden');
+    })
+    var left = parseFloat($('#map-canvas').css('margin-left'));
+    var width = $('#map-canvas').width();
+    setTimeout(function(){
+    $('#try-me').css('left', (left+width/2-65)+'px')        
+    }, 1000);
     maps.init();
 });
 

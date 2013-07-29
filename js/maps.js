@@ -12,7 +12,7 @@ maps.init = function(){
     maps.drawingManager = new google.maps.drawing.DrawingManager({
       drawingControl: true,
       drawingControlOptions: {
-        position: google.maps.ControlPosition.TOP_CENTER,
+        position: google.maps.ControlPosition.BOTTOM_CENTER,
         drawingModes: [
           google.maps.drawing.OverlayType.POLYGON,
         ]
@@ -105,7 +105,7 @@ maps.createHoverOverlay = function(region){
             'right': (width/2)+'px', 
             'display':'block'
         });
-        region.poly.setOptions({fillOpacity:.8});
+        region.poly.setOptions({fillOpacity:.6});
    }
    var mouseOut = function(){
         $('div[data-value="'+region.name+'"]').css("display", 'none');

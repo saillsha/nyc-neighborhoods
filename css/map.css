@@ -82,6 +82,47 @@ div.street-label{
   border-top:10px solid #336699;
 }
 
+#try-me{
+  width:100px;
+  height:30px;
+  position:absolute;
+  /*visibility: hidden;*/
+}
+
+.arrow-below{
+  position:absolute;
+  left: 80px;
+  border-left:8px solid transparent;
+  border-right:8px solid transparent;
+  border-bottom:10px solid #29abe2;
+}
+
+#try-me div.block{
+  position:absolute;
+  left:85px;
+  top:10px;
+  height:20px;
+  width:6px;
+  background-color:#29abe2;
+}
+
+#try-me span.text{
+  position:absolute;
+  top:0px;
+  font-size:11px;
+  left:25px;
+  font-weight: bold;
+}
+
+#try-me span.small-text{
+  position:absolute;
+  font-size:10px;
+  top:13px;
+  left:16px;
+  line-height: 10px;
+  text-align: center;
+}
+
 #info-window{
   font-size: 12px;
   width: 330px;
