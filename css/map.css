@@ -86,7 +86,7 @@ div.street-label{
   width:100px;
   height:30px;
   position:absolute;
-  /*visibility: hidden;*/
+  visibility: hidden;
 }
 
 .arrow-below{
