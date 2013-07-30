@@ -25,6 +25,15 @@ $(document).ready(function(){
 var MapViewModel = function(){
     //array of regions
     var self = this;
+    var localNeighborhoods = JSON.parse(localStorage['local-neighborhoods']);
+    for (var i = 0; i < localNeighborhoods.length; i++) {
+        //jb, kb
+        var current = localNeighborhoods[i];
+        for (var j = 0; j < current.path.length; j++) {
+            current.path[j] = new google.maps.LatLng(current.path[j].jb, current.path[j].kb);
+        }
+        regions.push(localNeighborhoods[i]);
+    }
     self.regions = ko.observableArray(
         regions.sort(function(a, b){
             return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
