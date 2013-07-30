@@ -23,6 +23,9 @@
               <input style="position:absolute; left:-9999px" data-bind="click: maps.draw, attr: {'data-value': $data.name}" type="checkbox" checked>
               <div class="checkbox image-checked" data-bind="style: { 'background-color': $data.color }"></div>
               <span data-bind="text: $data.name"></span>
+              <div data-bind="if: $data.hasOwnProperty('local'), click: maps.deletePoly" style="display: inline-block;">
+                <img data-bind="if: $data.hasOwnProperty('local')" src="images/remove-icon-small.png" />
+              </div>
             <label>
           </li>
         </ul>

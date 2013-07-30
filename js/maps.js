@@ -284,14 +284,44 @@ maps.savePoly = function(){
     }
     logStr += "]\n},";
     console.log(logStr);
-
-
+    maps.newRegion.local = true;
     mapVM.regions.push(maps.newRegion);
+    mapVM.regions.sort(function(a, b){
+        return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+    });
     $('#info-window p').css('color', 'gray');
     $('#info-window :button[value="save"]').attr('disabled', 'disabled');
     $('#info-window :button[value="done"]').removeAttr('disabled');
     $('#info-window').css('visibility', 'hidden');
     maps.createOverlay(maps.newRegion);
+    maps.syncLocal();
+}
+
+maps.syncLocal = function() {
+    var toLocal = [];
+    var tempRegions = mapVM.regions.slice();
+    var toJSON = function(region) {
+        var toReturn = {};
+        toReturn.local = true;
+        toReturn.has_label = region.has_label.slice();
+        toReturn.street_labels = [];
+        toReturn.path = region.path.slice();
+        toReturn.color = region.color;
+        toReturn.name = region.name;
+        return toReturn;
+    }
+    for (var i = 0; i < tempRegions.length; i++) {
+        if (tempRegions[i].local) {
+            toLocal.push(toJSON(tempRegions[i]));
+        }
+    }
+    localStorage['local-neighborhoods'] = JSON.stringify(toLocal);
+}
+
+maps.deletePoly = function(region) {
+    maps.removePoly(region);
+    mapVM.regions.remove(region);
+    maps.syncLocal();
 }
 
 //removes polygon from the map
