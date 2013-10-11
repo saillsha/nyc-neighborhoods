@@ -17,7 +17,10 @@ $(document).ready(function(){
     var left = parseFloat($('#map-canvas').css('margin-left'));
     var width = $('#map-canvas').width();
     setTimeout(function(){
-    $('#try-me').css('left', (left+width/2-65)+'px')        
+        $('#try-me').css({
+            left: (left+width/2-65)+'px',
+            visibility: 'visible'
+        });
     }, 1000);
     maps.init();
 });
