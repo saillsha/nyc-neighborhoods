@@ -92,23 +92,23 @@ maps.createHoverOverlay = function(region){
     gmap.drawOverlay({
         lat: avgLat,
         lng: avgLng,
-        content: '<div class="label" style="display:none; background-color:'+ 
+        content: '<div class="label" style="visibility:hidden; background-color:'+ 
             region.color + '" data-value="'+region.name+'">'+region.name+
             '<div class="overlay_arrow above" style="border-top: 10px solid '+
             region.color + '"></div></div>'
     });
    var mouseOver = function(){
-        var width = $('div[data-value="'+region.name+'"]').width();
-        var height = $('div[data-value="'+region.name+'"]').height();
+        var width = $('div[data-value="'+region.name+'"]').outerWidth();
+        var height = $('div[data-value="'+region.name+'"]').outerHeight();
         $('div[data-value="'+region.name+'"]').css({
-            'bottom':(height+16)+'px', 
-            'right': (width/2)+'px', 
-            'display':'block'
+            'bottom':(height+16)/2+'px', 
+
+            'visibility':'visible'
         });
         region.poly.setOptions({fillOpacity:.6});
    }
    var mouseOut = function(){
-        $('div[data-value="'+region.name+'"]').css("display", 'none');
+        $('div[data-value="'+region.name+'"]').css("visibility", 'hidden');
         region.poly.setOptions({fillOpacity:.35});
    }
    google.maps.event.addListener(region.poly, 'mouseover', mouseOver);
@@ -206,7 +206,7 @@ maps.polyComplete = function(e){
             has_label: [],
             street_labels: [],
             color: colors['green'],
-            path: e.getPath().b
+            path: e.getPath().j
         };
         //change cursor back to non-drawing mode
         maps.drawingManager.setOptions({drawingMode: null});
